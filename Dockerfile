@@ -50,7 +50,7 @@ RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/
     cp complete/rg.fish /usr/share/fish/vendor_completions.d && \
     rm -rf $HOME/ripgrep* && \
     \
-    wget --quiet https://github.com/sharkdp/fd/releases/download/v7.3.0/fd-v7.3.0-x86_64-unknown-linux-musl.tar.gz -O $HOME/fd.tar.gz && \
+    wget --quiet https://github.com/sharkdp/fd/releases/download/v7.4.0/fd-v7.4.0-x86_64-unknown-linux-musl.tar.gz -O $HOME/fd.tar.gz && \
     cd $HOME && tar xf $HOME/fd.tar.gz && \
     cd `find $HOME -type d -name "fd*"` && \
     cp fd /usr/local/bin/ && \
