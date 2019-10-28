@@ -10,6 +10,7 @@ This Docker image `lbwang/dailybox` based on Debian stable includes several tool
 - htop
 - parallel
 - ncdu
+- zstd
 - fish
 - ripgrep
 - fd
