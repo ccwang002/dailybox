@@ -41,7 +41,7 @@ RUN curl -o /tmp/fish.key -sL http://download.opensuse.org/repositories/shells:f
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ripgrep and fd
-RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-unknown-linux-musl.tar.gz -O $HOME/ripgrep.tar.gz && \
+RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-x86_64-unknown-linux-musl.tar.gz -O $HOME/ripgrep.tar.gz && \
     cd $HOME && tar xf $HOME/ripgrep.tar.gz && \
     cd `find $HOME -type d -name "ripgrep*"` && \
     mkdir -p /usr/local/share/man/man1 && \
