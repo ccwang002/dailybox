@@ -42,7 +42,7 @@ RUN curl -o /tmp/fish.key -sL http://download.opensuse.org/repositories/shells:f
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ripgrep and fd
-RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-x86_64-unknown-linux-musl.tar.gz -O $HOME/ripgrep.tar.gz && \
+RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz -O $HOME/ripgrep.tar.gz && \
     cd $HOME && tar xf $HOME/ripgrep.tar.gz && \
     cd `find $HOME -type d -name "ripgrep*"` && \
     mkdir -p /usr/local/share/man/man1 && \
@@ -51,7 +51,7 @@ RUN wget --quiet https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/
     cp complete/rg.fish /usr/share/fish/vendor_completions.d && \
     rm -rf $HOME/ripgrep* && \
     \
-    wget --quiet https://github.com/sharkdp/fd/releases/download/v7.4.0/fd-v7.4.0-x86_64-unknown-linux-musl.tar.gz -O $HOME/fd.tar.gz && \
+    wget --quiet https://github.com/sharkdp/fd/releases/download/v8.1.1/fd-v8.1.1-x86_64-unknown-linux-musl.tar.gz -O $HOME/fd.tar.gz && \
     cd $HOME && tar xf $HOME/fd.tar.gz && \
     cd `find $HOME -type d -name "fd*"` && \
     cp fd /usr/local/bin/ && \
@@ -65,7 +65,7 @@ COPY exa_0.9.0_musl/exa.1 /usr/local/share/man/man1/
 COPY exa_0.9.0_musl/completions.fish /usr/share/fish/vendor_completions.d/exa.fish
 
 # Miniconda3
-RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh -O $HOME/miniconda.sh && \
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-MacOSX-x86_64.sh -O $HOME/miniconda.sh && \
     /bin/bash $HOME/miniconda.sh -b -p /opt/conda && \
     conda config --add channels defaults && \
     conda config --add channels bioconda && \
